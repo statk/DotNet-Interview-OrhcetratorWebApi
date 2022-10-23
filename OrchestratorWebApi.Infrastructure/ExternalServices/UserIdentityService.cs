@@ -16,11 +16,11 @@ public class UserIdentityService : IUserIdentityExternalService
     {
         var userConfiguration =
             await _userIdentityApiClient.GetUserConfigurationAsync(userIdentityId, cancellationToken);
-        if (userConfiguration == null)
+        if (userConfiguration != null)
         {
             throw new ArgumentException($"{nameof(userConfiguration)} cannot be null");
         }
 
-        return userConfiguration;
+        return userConfiguration!;
     }
 }

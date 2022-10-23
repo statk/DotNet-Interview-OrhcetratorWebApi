@@ -14,7 +14,7 @@ public class TenantConfigurationExternalService : ITenantConfigurationExternalSe
     public async Task<string> GetTenantCurrencyAsync(string userTenant, CancellationToken cancellationToken)
     {
         var tenantCurrency = await _tenantApiClient.GetTenantCurrencyAsync(userTenant, cancellationToken);
-        if (tenantCurrency == null)
+        if(tenantCurrency == null)
         {
             throw new ArgumentException($"{nameof(tenantCurrency)} cannot be null");
         }
