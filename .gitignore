@@ -3,3 +3,5 @@ obj/
 /packages/
 riderModule.iml
 /_ReSharper.Caches/
+.idea/*/*.*
+.idea/.idea.OrchestratorWebApi/.idea/sonarlint/issuestore/index.pb
